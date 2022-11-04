@@ -84,7 +84,7 @@ zlib    | 1.2.8+  | Graviton2에서 최고의 성능을 얻으려면 [zlib-cloud
 Docker, Kubernetes, Amazon ECS, 그리고 Amazon EKS를 Graviton에서 실행할 수 있습니다. Amazon ECR은 multi-arch 컨테이너를 지원합니다. Graviton에서 컨테이너 기반 워크로드를 실행하는 방법에 대한 내용은 [여기](containers.md)를 참조하세요.
 
 # [Lambda에서 Graviton 사용](/aws-lambda/README.md)
-[AWS Lambda](https://aws.amazon.com/lambda/)를 사용하면 x86 기반 기능 외에도 Arm 기반 AWS Graviton2 프로세서에서 실행할 새 기능과 기존 기능을 구성할 수 있습니다. 이 프로세서 아키텍처 옵션을 사용하면 가격 성능을 최대 34% 향상시킬 수 있습니다. 기간 요금은 [밀리초 단위](https://aws.amazon.com/blogs/aws/new-for-aws-lambda-1ms-billing-granularity-adds-cost-savings/)로 x86의 현재 가격보다 20% 저렴합니다. 이는 [Provisioned Concurrency](https://aws.amazon.com/blogs/aws/new-provisioned-concurrency-for-lambda-functions/))을 사용할 때의 기간 요금에도 적용됩니다. Compute [Savings Plans](https://aws.amazon.com/blogs/aws/savings-plan-update-save-up-to-17-on-your-lambda-workloads/)는 Graviton2로 구동되는 Lambda 기능을 지원합니다.
+[AWS Lambda](https://aws.amazon.com/lambda/)를 사용하면 x86 기반 기능 외에도 Arm 기반 AWS Graviton2 프로세서에서 실행할 새 기능과 기존 기능을 구성할 수 있습니다. 이 프로세서 아키텍처 옵션을 사용하면 가격 성능을 최대 34% 향상시킬 수 있습니다. 기간 요금은 [밀리초 단위](https://aws.amazon.com/blogs/aws/new-for-aws-lambda-1ms-billing-granularity-adds-cost-savings/)로 x86의 현재 가격보다 20% 저렴합니다. 이는 [Provisioned Concurrency](https://aws.amazon.com/blogs/aws/new-provisioned-concurrency-for-lambda-functions/)을 사용할 때의 기간 요금에도 적용됩니다. Compute [Savings Plans](https://aws.amazon.com/blogs/aws/savings-plan-update-save-up-to-17-on-your-lambda-workloads/)는 Graviton2로 구동되는 Lambda 기능을 지원합니다.
 
 [Lambda](/aws-lambda/README.md) 페이지에서는 몇 가지 마이그레이션 고려 사항을 강조하고 Arm/Graviton2를 사용하여 Lambda 기능을 빌드하고 마이그레이션하는 방법을 탐색하는 데 사용할 수 있는 간단한 배포 데모를 제공하고 있습니다.
 

@@ -1,15 +1,15 @@
 # Graviton 에서의 Java
 
-자바는 범용 프로그래밍 언어입니다. 컴파일된 자바 코드는 재컴파일 없이 자바를 지원하는 모든 플랫폼에서 실행될 수 있다. 자바 애플리케이션들은 일반적으로 기본 컴퓨터 아키텍처에 관계 없이 모든 자바 가상 머신(JVM)에서 실행될 수 있는 바이트 코드로 컴파일됩니다. _[위키피디아](https://en.wikipedia.org/wiki/Java_(programming_language))_
+자바는 범용 프로그래밍 언어입니다. 컴파일된 자바 코드는 재컴파일 없이 자바를 지원하는 모든 플랫폼에서 실행될 수 있습니다. 자바 애플리케이션들은 일반적으로 기본 컴퓨터 아키텍처에 관계 없이 모든 자바 가상 머신(JVM)에서 실행될 수 있는 바이트 코드로 컴파일됩니다. _[위키피디아](https://en.wikipedia.org/wiki/Java_(programming_language))_
 
-자바는 잘 지원되며 일반적으로 arm64에서 즉시 사용할 수 있는 성능을 제공합니다. [Amazon Corretto](https://aws.amazon.com/corretto/)는 OpenJDK(OpenJava Development Kit)의 무료, 멀티 플랫폼, 프로덕션-레디 배포판으로 Graviton-powered 인스턴스를 지원합니다. Java 8은 Arm 프로세서에서 완전히 지원되지만 일부 고객은 Java 11로 전환하기 전까지 Graviton의 완전한 성능 혜택을 얻을 수 없습니다.
+자바는 arm을 잘 지원하며 일반적으로 arm64에서 즉시 사용할 수 있는 성능을 제공합니다. [Amazon Corretto](https://aws.amazon.com/corretto/)는 OpenJDK(OpenJava Development Kit)의 무료, 멀티 플랫폼, 프로덕션-레디 배포판으로 Graviton-powered 인스턴스를 지원합니다. Java 8은 Arm 프로세서에서 완전히 지원되지만 일부 고객은 Java 11로 전환하기 전까지 Graviton의 완전한 성능 혜택을 얻을 수 없습니다.
 
 이 페이지에는 Graviton에서 Java 애플리케이션을 빌드하고 튜닝하는 것에 대한 구체적인 세부 정보가 포함되어 있습니다.
 
 ### Java 버전
 arm64용 JDK 바이너리는 다양한 소스에서 사용할 수 있습니다. [Amazon Corretto](https://aws.amazon.com/corretto/)은 Graviton 프로세서에서 실행되는 Java 워크로드의 성능을 지속적으로 개선하고 있으며, JDK를 사용할 수 있는 경우 Corretto를 사용하는 것이 좋습니다. Corretto는 AWS의 성능 향상에 가장 빠르게 액세스할 수 있는 방법을 제공하기 때문입니다.
 
-2020년 10월 이후 출시된 Corretto의 버전은 JVM 내에서 가장 최적의 Atomic 연산을 사용하도록 제작되었습니다: Corretto 11(모든 버전), Correto8(Amazon Linux 2에만 해당) 이로 인해 일부 워크로드에서 GC 시간이 단축되고 Apache Kafka와 같은 네트워크 집약적인 워크로드에서 경합이 발생하지 않습니다.
+2020년 10월 이후 출시된 Corretto의 버전은 JVM 내에서 가장 최적의 Atomic 연산을 사용하도록 제작되었습니다: Corretto 11(모든 버전), Correto8(Amazon Linux 2에만 해당). 이로 인해 일부 워크로드에서 GC 시간이 단축되고 Apache Kafka와 같은 네트워크 집약적인 워크로드에서 경합이 발생하지 않습니다.
 
 Corretto 11(>=11.0.12) 버전에는 가벼운 수준에서 중간 정도 수준의 잠금 경합이 있는 워크로드의 성능을 향상시키기 위한 추가 향상이 있습니다: JVM 내부의 스핀 잠금 동작 개선, Graviton의 `Thread.onSpinWait()` 구현 개선.
 
