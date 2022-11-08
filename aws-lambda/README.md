@@ -77,7 +77,7 @@ sam deploy --stack-name GravitonLambdaNumber -g
 
 ![sam deploy -g](/aws-lambda/img/samdeploy-g.png)
 
-AWS 샘은 인프라를 배포하고 APIBasePath를 출력합니다.
+AWS SAM은 인프라를 배포하고 APIBasePath를 출력합니다.
 
 ![ApiBasePath](/aws-lambda/img/ApiBasePath.png)
 
